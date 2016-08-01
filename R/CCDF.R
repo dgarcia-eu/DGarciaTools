@@ -18,7 +18,7 @@ CCDF <- function(x, include.min=FALSE) {
   if (include.min)  
   {  xvs <- c(min(x)-1,xvs)  }
   
-  CDvec <- sapply(xvs, FUN= function(x) {sum(xs>x)}) # we count strictly larger entries
+  CDvec <- sapply(xvs, FUN= function(y) {sum(x>y)}) # we count strictly larger entries
   total <- length(x)
   
   rbind(v=xvs, P=CDvec/total, N=CDvec)
