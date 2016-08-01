@@ -16,9 +16,9 @@
 #' @export
 #' @examples
 #' xs <- floor(runif(min=0,max=10,n=100))
-#' plot.CCDF(xs)
+#' plotCCDF(xs)
 #' 
-plot.CCDF <- function(x, include.min=FALSE, counts=FALSE, log="xy", type="l", xlab="x", ylab="P(X>x)", cex.lab=1.3, cex.axis=1.3, lwd=2, ...) {
+plotCCDF <- function(x, include.min=FALSE, counts=FALSE, log="xy", type="l", xlab="x", ylab="P(X>x)", cex.lab=1.3, cex.axis=1.3, lwd=2, ...) {
   CD <- CCDF(x, include.min)
   P <- CD["P",]
   v <- CD["v",]
